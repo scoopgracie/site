@@ -1,0 +1,85 @@
+{% extends "_base.html" %}
+{% block title %}Googlebot Tests{% endblock %}
+{% block subheading %}Googlebot Tests{% endblock %}
+{% block body %}
+<section>
+	<h3>Test #1</h3>
+	<p><a href=a1/>Googlebot Test #1</a> was a general test performed on August 20, 2019. (Note that due to something (probably a spam detector), this test is no longer in the index.)</p>
+	<h4>Results</h4>
+	<table>
+		<thead>
+			<tr>
+				<th>Test</th>
+				<th>Indexed?</th>
+				<th>Notes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Plain text in the document</td>
+				<td>Yes</td>
+				<td>This was just plain "Web 1.0"-style text.</td>
+			</tr>
+			<tr>
+				<td>Added with <code>document.write()</code></td>
+				<td>Yes</td>
+				<td><code>document.write("text")</code></td>
+			</tr>
+			<tr>
+				<td>Added with <code>document.write()</code>, from two variables</td>
+				<td>Yes</td>
+				<td><code>document.write(var1 + var2)</code></td>
+			</tr>
+			<tr>
+				<td>Added with <code>document.write()</code>, from reversed text</td>
+				<td>Yes</td>
+				<td>Text switched back to normal order by JavaScript</td>
+			</tr>
+			<tr>
+				<td>Added with <code><em>element</em>.textContent</code>, from reversal of result of AJAX request to Google error page for search for text through CORS proxy</td>
+				<td>No</td>
+				<td>See next row. For how this test worked, see <a href=#t1n1>Test 1, Note 1</a></td>
+			</tr>
+			<tr>
+				<td>Added with <code><em>element</em>.textContent</code>, from AJAX request to page on this site</td>
+				<td>Yes</td>
+				<td>Apparently, Googlebot will make AJAX requests to the same site, but not cross-origin ones, even when allowed by CORS.</td>
+			</tr>
+			<tr>
+				<td>Added with <code><em>element</em>.textContent</code>, triggered by button</td>
+				<td>No</td>
+				<td>If Googlebot did click buttons, it would probably accidentally "agree" to <a href="https://en.wikipedia.org/wiki/Clickwrap">clickwrap</a> license agreements.</td>
+			</tr>
+			<tr>
+				<td>From image (no alt text)</td>
+				<td>No</td>
+				<td>Despite Google's sponsoring of the <a href="https://en.wikipedia.org/wiki/Tesseract_(software)">Tesseract</a> <a href="https://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a> software, Googlebot does not read text from images.</td>
+			</tr>
+			<tr>
+				<td>From image (blank alt text)</td>
+				<td>No</td>
+				<td>See previous row.</td>
+			</tr>
+			<tr>
+				<td>From image (Lorem Ipsum alt text)</td>
+				<td>No</td>
+				<td>See previous row.</td>
+			</tr>
+			<tr>
+				<td>Hidden with CSS</td>
+				<td>Yes</td>
+				<td>This was plain "Web 1.0"-style text hidden by CSS. Since human visitors do not see this, it seems that Googlebot should not index it.</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Test</th>
+				<th>Indexed?</th>
+				<th>Notes</th>
+			</tr>
+		</tfoot>
+	</table>
+	<h4 id=t1n1>Note 1</h4>
+	<p>This test was quite complicated. After determining the desired output text, I constructed a URL for a Google search of the reverse of the desired string. (The URL in the code routes the request through a CORS proxy, as Google does not allow cross-origin requests.) Since this string is not in Google's index, it gave an error page saying there were no results. My code parsed this page and extracted the search query string. It then reversed this string and displayed it.</p>
+</section>
+{% endblock %}

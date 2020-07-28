@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block title %}Technical Observations{% endblock %}
+{% block subheading %}Technical Observations{% endblock %}
+{% block body %}
+<ol>
+        <li>Google's cache preserves JavaScript rather than running it once and cacheing the DOM. This is proveable: <a href="http://webcache.googleusercontent.com/search?q=cache:2WS3Zh8ooSkJ:https://scoopgracie.com/adblock-detector/&hl=en&gl=us&strip=0&vwsrc=0">their cached version of my Adblock Detector</a> is fully functional.</li>
+        <li>Googlebot Mobile's User-Agent string is mostly that of Chrome on a Nexus 5X. The only difference is a section at the end indicating that it is not really a smartphone, but only compatible, as well as identifying it as Googlebot.</li>
+</ol>
+<p>Also, check out the results of my <a href=/googlebot-tests>Googlebot tests</a>!</p>
+{% endblock %}

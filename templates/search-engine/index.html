@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+{% block title %}Search Engine Tutorial{% endblock %}
+{% block subheading %}Search Engine Tutorial{% endblock %}
+{% block body %}
+<p>This tutorial will show you how to make a search engine just as good as Google with only a single page of HTML! No programming is required!</p>
+<section>
+	<h3>Instructions</h3>
+	<ol>
+		<li>Create a "boilerplate" HTML document.</li>
+		<li>Add a <code>&lt;form&gt;</code> element.</li>
+		<li>Set the <code>method</code> to <code>get</code>.</li>
+		<li>Set the <code>action</code> to <code>https://google.com/search</code>.</li>
+		<li>Add an <code>&lt;input&gt;</code> tag.</li>
+		<li>Set the <code>type</code> to <code>search</code>.</li>
+		<li>Set the <code>name</code> to <code>q</code>.</li>
+		<li>Add a submit button.</li>
+		<li>Add extra markup if desired.</li>
+		<li>Add CSS if desired.</li>
+		<li>Congratulations! You now have an HTML-only (or HTML-and-CSS-only) search engine that's just as good as Google!</li>
+	</ol>
+</section>
+<section>
+	<h3>Demo</h3>
+	<form method=get action=https://google.com/search>
+		<label for=q>Search: </label><input type=search name=q id=q><br>
+		<input type=submit value=Search>
+	</form>
+</section>
+<p style="font-size: 2px">Yes, this is a joke.</p>{% endblock %}

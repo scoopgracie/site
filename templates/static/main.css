@@ -1,0 +1,61 @@
+body {
+	background-color: #7FFFFF;
+}
+* {
+	text-align: justify;
+	font-family: 'Montserrat', sans-serif;
+	border: none;
+	column-rule: 5px solid red;
+}
+p {
+	font-size: 16px;
+}
+.blockCode {
+	text-align: left;
+	display: block;
+	word-break: break-all;
+}
+h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+	font-family: 'Audiowide', sans-serif;
+	color: red;
+}
+footer, footer *{
+	text-align: center;
+}
+footer {
+	border-radius: 25px;
+	background-color: #5FDFDF;
+	color: black;
+	padding: 2em;
+	margin: 1em;
+}
+/*a[href^="https://en.wikipedia.org"] {
+    background: transparent url(/static/wp.png) top right no-repeat;
+    padding-right: 15px;
+}*/
+table {
+	max-width: 80vw;
+	margin: 0 auto;
+	background-color: #5FDFDF;
+	color: black;
+	border-collapse: collapse;
+	border: 2px solid #5FDFDF;
+}
+tbody {
+	background-color: #7FFFFF;
+}
+tr {
+	border: 2px solid #5FDFDF;
+	margin: 3px;
+}
+thead tr, tfoot tr {
+	border: none;
+}
+
+td, th {
+	padding: 1em;
+}
+span.note {
+	font-size: .8em;
+	vertical-align: super;
+}

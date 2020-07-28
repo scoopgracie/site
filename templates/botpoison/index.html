@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block title %}BotPoison{% endblock %}
+{% block subheading %}BotPoison{% endblock %}
+{% block body %}
+<p><strong>Due to a current Web site rewrite, BotPoison is currently not available for download</strong>, but when it comes back, it will be even better!</p>
+<p>BotPoison is a simple <a href=https://en.wikipedia.org/wiki/Tarpit_(networking)>tarpit</a> that drastically slows down bad <a href=https://en.wikipedia.org/wiki/Web_crawler>Web crawlers</a> (e.g. spambots). It works by creating tens of thousands of slightly different links to itself, to quickly dominate a crawler's queue. Well-behaved bots (e.g. search engine crawlers) are NOT affected, as it uses the <code></code>&lt;meta name=robots&gt;</code> tag to make proper bots ignore it.</p>
+<p>Note that <em>bots could easily be programmed to detect BotPoison</em>; however, <em>it would be just as simple to modify it to keep up</em>.</p>
+<p>If you would like to make your site spambot-resistant, you can simply insert the following HTML anywhere in the site:</p>
+<code class=blockCode>&lt;a href=/path-to-botpoison.php style=display:none rel=nofollow&gt;link&lt;/a&gt;</code>
+{% endblock %}

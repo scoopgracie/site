@@ -1,0 +1,90 @@
+{% extends "_base.html" %}
+{% block title %}Recommendations{% endblock %}
+{% block subheading %}Recommendations{% endblock %}
+{% block body %}
+<table>
+	<thead>
+		<tr>
+			<th>Software/Service Type</th>
+			<th>What I use/recommend</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Ad blocker</td>
+			<td><a href=https://adblockplus.org>Adblock Plus</a></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><a href=https://mail.google.com>Gmail</a></td>
+		</tr>
+		<tr>
+			<td>Mobile operating system</td>
+			<td><a href=https://android.com>Android</a> (on non-Samsung devices)</td>
+		</tr>
+		<tr>
+			<td>Operating system</td>
+			<td><a href=https://linuxmint.com>Linux Mint</a></td>
+		</tr>
+		<tr>
+			<td>Search engine</td>
+			<td><a href=https://google.com>Google</a></td>
+		</tr>
+		<tr>
+			<td>Web browser</td>
+			<td><a href=https://google.com/chrome>Google Chrome</a></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Software/Service Type</th>
+			<th>What I use/recommend</th>
+		</tr>
+	</tfoot>
+</table>
+<section>
+	<h3>Geek stuff</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Software/Service Type</th>
+				<th>What I use/recommend</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>DNS checker</td>
+				<td><a href=https://whatsmydns.net>whatsmydns.net</a></td>
+			</tr>
+			<tr>
+				<td>Anti-spam tool</td>
+				<td><a href=/botpoison>BotPoison</a><span class=note><a href=#n1>[1]</a></span></td>
+			</tr>
+			<tr>
+				<td>Web hosting</td>
+				<td><a href=https://ait.com>AIT</a><span class=note><a href=#n2>[2]</a></span></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>Software/Service Type</th>
+				<th>What I use/recommend</th>
+			</tr>
+		</tfoot>
+	</table>
+</section>
+
+<section class=noCenter>
+
+	<h3>Notes</h3>
+
+	<ol>
+
+		<li id=n1>Please note that this suggestion is <em>very</em> biased, as I wrote BotPoison.</li>
+
+		<li id=n2>If you order from AIT, please enter my sales ID, <strong>1071</strong>, when you place your order.</strong>
+
+	</ol>
+
+</section>
+{% endblock %}

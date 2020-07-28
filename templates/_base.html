@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>{% block title %}{% endblock %} - ScoopGracie</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% block meta %}
+		{% endblock %}
+		{% block css %}
+		{% endblock %}
+		<meta name="google-site-verification" content="ljUsIlJaPC3zLaDE2JRGZaIpj4HxAie862xbUfua3mI">
+                <meta name="abuseipdb-verification" content="qqeWy1To">
+                <link href="https://fonts.googleapis.com/css?family=Audiowide%7CMontserrat%7CSource+Code+Pro&display=swap" rel="stylesheet">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel=stylesheet href=/static/main.css>
+	</head>
+	<body>
+		{% block header %}
+		<header>
+			{% block h1tag %}<h1><a href=/>ScoopGracie</a></h1>{% endblock %}
+			{% block h2tag %}<h2>{% block subheading %}{% endblock %}</h2>{% endblock %}
+		</header>
+		{% endblock %}
+		<main>
+			{% block body %}
+			{% endblock %}
+		</main>
+		{% block js %}
+		{% endblock %}
+		<footer>
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/static/cc_by.png"></a>
+			<p><small>Unless otherwise noted, all publicly-available content on this site &copy; 2020 ScoopGracie and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</small></p>
+			<!--tb number is TB7YAWA--><p>If you are a <a href=https://www.geocaching.com target=_blank rel=noopener>Geocacher</a>, you can log my site as <a href="https://www.geocaching.com/track/details.aspx?id=6927923" target=_blank rel=noopener>a Travel Bug</a>! The tracking code is: <strong>2D7ARH</strong>.</p>
+			<p><small><em>Please do not use the "ScoopGracie" name in a way that implies endorsement, even if you are using one of our projects.</em></small></p>
+			<p><small>By using this site, you agree to our <a href=/privacy/>privacy policy</a>.</small></p>
+			<script>
+				var ad = document.createElement('kitty-ad')
+				ad.setAttribute('height', 100)
+				ad.setAttribute('width', Math.min(400, (screen.width-100)))
+				document.querySelector('footer').appendChild(ad)
+			</script>
+		</footer>
+		<script src=/static/kitty-ads.js></script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+{% extends "_base.html" %}
+{% block title %}Ad blockers{% endblock %}
+{% block subheading %}Get an Ad Blocker{% endblock %}
+{% block body %}
+<section>
+	<h3>How to choose one?</h3>
+	<ul>
+		<li>If you want: <strong>a user-friendly blocker that "just works"</strong>, pick <em>Adblock Plus</em>. I recommend Adblock Plus for most users.</li>
+		<li>If you want: <strong>absolutely no ads, never needing to disable the blocker, at the cost of a less user-friendly experience</strong>, pick <em>uBlock Origin</em>.</li>
+	</ul>
+	<p>I used to recommend AdBlock for users who want to be able to disable the blocker on only one page. However, Adblock Plus now has this feature. Therefore, I no longer recommend AdBlock for any user, as they are virtually identical in functionality, but Adblock Plus is (at least in my opinion) more user-friendly.</p>
+	<h4>Desktop</h4>
+	<p>For desktop browsers, use the links below.</p>
+	<h4>Mobile</h4>
+	<ul>
+		<li>If you use <strong>Chrome</strong>, you will need to <em>switch to one of the other browsers listed below</em> or just ignore the ads.</li>
+		<li>If you use <strong>Firefox</strong>, <em>just use the installation links below</em>. Mobile Firefox supports desktop extensions.</li>
+		<li>If you use <strong>Edge</strong>, <em>Adblock Plus is installed by default, but disabled. <a href="#mobileedge">See below for instructions on how to enable it.</a></em></li>
+		<li>If you use <strong>Samsung Internet</strong>, you can <em>install Adblock Plus. (uBlock Origin is not available for Samsung Internet.) <a href="#samsunginternet">See below for instructions.</a></em></li>
+		<li>If you <strong>are OK with changing browsers</strong>, you can <em>install Adblock Browser for <a target=_blank href="https://play.google.com/store/apps/details?id=org.adblockplus.browser">Android</a> or <a target=_blank href="https://apps.apple.com/us/app/adblock-browser/id1015653330?mt=8&ign-mpt=uo%3D4">iOS</a></em>, which has Adblock Plus built-in.</li>
+	</ul>
+	<h4>A note about Safari</h4>
+	<p>My only Apple device is an iPad that doesn't work. Therefore, I cannot provide any information about Safari on any platform.</p>
+</section>
+<section>
+	<h3>Installation Links</h3>
+	<article class=browsers id=chrome>
+		<h4>Google Chrome</h4>
+		<ul>
+			<li><a target=_blank href=https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb>Adblock Plus</a></li>
+			<li><a target=_blank href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm>uBlock Origin</a></li>
+		</ul>
+	</article>
+	<article class=browsers id=firefox>
+		<h4>Mozilla Firefox</h4>
+		<ul>
+			<li><a target=_blank href=https://addons.mozilla.org/en-US/firefox/addon/adblock-plus/>Adblock Plus</a></li>
+			<li><a target=_blank href=https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/>uBlock Origin</a></li>
+		</ul>
+	</article>
+	<article class=browsers id=edge>
+		<h4>Microsoft Edge</h4>
+		<p><strong>These are for the new Edge (the one with the wave logo).</strong></p>
+		<ul>
+			<li><a target=_blank href=https://microsoftedge.microsoft.com/addons/detail/adblock-plus-free-ad-bl/gmgoamodcdcjnbaobigkjelfplakmdhh>Adblock Plus</a></li>
+			<li><a target=_blank href=https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak>uBlock Origin</a></li>
+		</ul>
+	</article>
+</section>
+<section id=samsunginternet>
+	<h3>Samsung Internet setup</h3>
+	<ol>
+		<li>Install <a target=_blank href="https://play.google.com/store/apps/details?id=org.adblockplus.adblockplussbrowser">Adblock Plus for Samsung Internet</a>. This is a separate app that adds ad-blocking functionality to Samsung Internet.</li>
+		<li>Open Samsung Internet.</li>
+		<li>Open the menu (three stacked lines).</li>
+		<li>Tap "Add-ons".</li>
+		<li>Tap "Ad blockers".</li>
+		<li>Tap "Adblock Plus for Samsung Internet".</li>
+		<li>Press the home button to close Samsung Internet.</li>
+		<li>Open "Adblock Plus for Samsung Internet".</li>
+		<li>If one appears, allow any "Initializing" dialog to go away.</li>
+		<li>Dismiss any other dialogs.</li>
+		<li>Tap "Allow some nonintrusive adverising".</li>
+		<li>You should now have an ad-free browsing experience.</li>
+	</ol>
+</section>
+<section id=mobileedge>
+	<h3>Edge Mobile setup</h3>
+	<ol>
+		<li>Open Edge.</li>
+		<li>Open the menu (... icon).</li>
+		<li>Tap "Settings".</li>
+		<li>Tap "Content blockers"</li>
+		<li>Tap "Adblock Plus".</li>
+		<li>If a dialog appears, dismiss it.</li>
+		<li>Tap "Advanced settings".</li>
+		<li>Tap "Allow acceptable ads".</li>
+		<li>Press the Back button until you reach the main browser again.</li>
+		<li>You should now have an ad-free browsing experience.</li>
+	</ol>
+</section>
+<section>
+	<h3>Notes on Adblock Plus</h3>
+	<p>By default, Adblock Plus allows some ads that are considered acceptable. However, you can easily disable this behavior. (This is included in the tutorials for Edge Mobile and Samsung Internet.) uBlock Origin blocks all ads by default.</p>
+	<ol>
+		<li>Open any Web page.</li>
+		<li>Click the Adblock Plus extension/add-on icon.</li>
+		<li>Click the gear to open Settings.</li>
+		<li>Click the checkbox next to "Allow Acceptable Ads".</li>
+		<li>Nearly all ads should now be blocked.</li>
+	</ol>
+</section>
+<section>
+	<h3>How to support publishers</h3>
+	<p>One problem with ad blockers is that they literally block the main source of income for many publishers. Adblock Plus has "acceptable ads" support, but even these are sometimes annoying. What I do is disable the ad blocker on sites I want to support, and turn it back on if the site shows annoying ads.</p>
+{% endblock %}
